@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/messaageSingleLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/display_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignTop="@+id/messageImage"
+        android:layout_toEndOf="@+id/messageImage"
+        android:textSize="10dp"
+        android:text="@string/display_name" />
+
+    <ImageView
+        android:id="@+id/sendImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/messageText"
+        android:layout_marginEnd="0dp" />
+
+    <TextView
+        android:id="@+id/messageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/display_name"
+        android:layout_toEndOf="@+id/messageImage"
+        android:text="Message Text"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25dp" />
+
+</RelativeLayout>

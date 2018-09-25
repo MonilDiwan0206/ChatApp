@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/cToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/mRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mLinear"
+        android:layout_below="@+id/cToolBar">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mMessageList"
+            android:layout_width="match_parent"
+            android:layout_height="466dp"
+            android:layout_above="@id/mLinear"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/cToolBar"></android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/addBtn"
+            android:layout_width="47dp"
+            android:layout_height="49dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:src="@mipmap/add" />
+
+        <EditText
+            android:id="@+id/chatMessage"
+            android:layout_width="289dp"
+            android:layout_height="49dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="8"
+            android:background="@color/white"
+            android:hint="Enter your Message" />
+
+        <ImageButton
+            android:id="@+id/sendBtn"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:src="@mipmap/send" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
